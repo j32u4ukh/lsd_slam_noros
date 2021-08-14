@@ -45,7 +45,21 @@ $./scripts/download_tum_mono.sh
 
 The debug window should appear by executing `$./bin/main_on_images data/sequence_$SEQUENCE`.
 
-If segmentation fault or Gtk-WARNING happens, executing the command above multiple times may solve it.
+可能遇到
+
+```
+(DebugWindow DEPTH:40167): Gtk-WARNING **: 12:15:28.669: gtk_disable_setlocale() must be called before gtk_init()
+Segmentation fault (core dumped)
+```
+
+解決方法：
+
+1. 多執行幾次（不一定有效）
+2. [放開權限，允許本地連接](https://www.lujun9972.win/blog/2018/04/24/docker%E5%AE%B9%E5%99%A8%E4%B8%AD%E8%B7%91gui%E7%9A%84%E6%9C%80%E7%AE%80%E5%8D%95%E6%96%B9%E6%B3%95/)
+
+```
+$ xhost +local:
+```
 
 ## Related Papers
 
