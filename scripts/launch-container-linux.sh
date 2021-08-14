@@ -12,6 +12,7 @@ fi
 docker run -it \
     -e DISPLAY=$DISPLAY \
     -v /tmp/.X11-unix:/tmp/.X11-unix \
+    -v "/media/j32u4ukh/TOSHIBA EXT/DockerVolume":/root/workspace/lsd_slam_noros/data \
     --name lsdslam_noros \
     -e "TERM=xterm-256color" \
     lsdslam_noros
